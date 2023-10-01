@@ -1,0 +1,73 @@
+    config                                  
+        kmer_size                                : 31
+        mini_size                                : 10
+        solidity_kind                            : sum
+        abundance_min                            : 2
+        abundance_max                            : 2147483647
+        available_space                          : 41502827
+        estimated_sequence_number                : 320664377
+        estimated_sequence_volume                : 38894
+        estimated_kmers_number                   : 31104444569
+        estimated_kmers_volume                   : 237308
+        max_disk_space                           : 41500827
+        max_memory                               : 5000
+        nb_passes                                : 1
+        nb_partitions                            : 290
+        nb_bits_per_kmer                         : 64
+        nb_cores                                 : 10
+        minimizer_type                           : lexicographic (kmc2 heuristic)
+        repartition_type                         : unordered
+        nb_cores_per_partition                   : 1
+        nb_partitions_in_parallel                : 10
+        nb_cached_items_per_core_per_part        : 32768
+        nb_banks                                 : 1
+    dsk                                     
+        bank                                    
+            bank_uri                                 : /kwak/hub/25_cbelliardo/MISTIC/Salade_I/3_curve/illumina/run1/subsampling_fastq/subsampling1/illumina_reads_R1_0.6.fastq
+            bank_size                                : 105913787478
+            bank_total_nt                            : 41610609004
+            sequences                               
+                seq_number                               : 311574892
+                seq_size_min                             : 36
+                seq_size_max                             : 151
+                seq_size_mean                            : 133.5
+                seq_size_deviation                       : 25.3
+            kmers                                   
+                kmers_nb_valid                           : 32263362244
+                kmers_nb_invalid                         : 0
+        stats                                   
+            temp_files                              
+                nb_superkmers                            : 2999733876
+                avg_superk_length                        : 10.76
+                minimizer_density                        : 2.14
+                total_size_(MB)                          : 32797
+                tmp_file_biggest_(MB)                    : 131
+                tmp_file_smallest_(MB)                   : 107
+                tmp_file_mean_(MB)                       : 113.1
+            histogram                               
+                cutoff                                   : 2
+                nb_ge_cutoff                             : 4114413867
+                ratio_weak_volume                        : 0.60
+                first_peak                               : 75
+            kmers                                   
+                solidity_kind                            : sum
+                thresholds                               : 2 
+                kmers_nb_distinct                        : 23412445808
+                kmers_nb_solid                           : 4114413953
+                kmers_nb_weak                            : 19298031855
+                kmers_percent_weak                       : 82.4
+            partitions                              
+                nb_partitions                            : 290
+                nb_items                                 : 4114413953
+                part_biggest                             : 14662000
+                part_smallest                            : 11643799
+                part_mean                                : 14187634.3
+                kind                                    
+                    vector                                   : 290
+            fillsolid_time                           : 7174.225
+                1.read                                   : 1975.217
+                2.sort                                   : 120.365
+                3.dump                                   : 5078.643
+        time                                     : 16113.420
+            fill_partitions                          : 8828.559
+            fill_solid_kmers                         : 7284.861

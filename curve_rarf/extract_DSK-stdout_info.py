@@ -111,5 +111,7 @@ if __name__ == '__main__':
     dico_info = extract_info_from_txt(txt_liste , keys_to_extract)
     
     parse_listOFdico_to_csv(dico_info, output_csv)
+    
+    print(dico_info)
 
 

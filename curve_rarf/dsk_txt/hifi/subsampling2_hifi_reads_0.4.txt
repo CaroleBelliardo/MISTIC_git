@@ -1,0 +1,73 @@
+    config                                  
+        kmer_size                                : 31
+        mini_size                                : 10
+        solidity_kind                            : sum
+        abundance_min                            : 2
+        abundance_max                            : 2147483647
+        available_space                          : 42358136
+        estimated_sequence_number                : 1166672
+        estimated_sequence_volume                : 7722
+        estimated_kmers_number                   : 8061703520
+        estimated_kmers_volume                   : 61505
+        max_disk_space                           : 42356136
+        max_memory                               : 5000
+        nb_passes                                : 1
+        nb_partitions                            : 80
+        nb_bits_per_kmer                         : 64
+        nb_cores                                 : 10
+        minimizer_type                           : lexicographic (kmc2 heuristic)
+        repartition_type                         : unordered
+        nb_cores_per_partition                   : 1
+        nb_partitions_in_parallel                : 10
+        nb_cached_items_per_core_per_part        : 131072
+        nb_banks                                 : 1
+    dsk                                     
+        bank                                    
+            bank_uri                                 : HIFI/subsampling2/hifi_reads_0.4.fasta
+            bank_size                                : 8159545846
+            bank_total_nt                            : 8100849861
+            sequences                               
+                seq_number                               : 1165206
+                seq_size_min                             : 86
+                seq_size_max                             : 27720
+                seq_size_mean                            : 6952.3
+                seq_size_deviation                       : 2611.7
+            kmers                                   
+                kmers_nb_valid                           : 8065893681
+                kmers_nb_invalid                         : 0
+        stats                                   
+            temp_files                              
+                nb_superkmers                            : 675403840
+                avg_superk_length                        : 11.94
+                minimizer_density                        : 1.93
+                total_size_(MB)                          : 7557
+                tmp_file_biggest_(MB)                    : 132
+                tmp_file_smallest_(MB)                   : 88
+                tmp_file_mean_(MB)                       : 94.5
+            histogram                               
+                cutoff                                   : 2
+                nb_ge_cutoff                             : 806051416
+                ratio_weak_volume                        : 0.74
+                first_peak                               : 74
+            kmers                                   
+                solidity_kind                            : sum
+                thresholds                               : 2 
+                kmers_nb_distinct                        : 6793117409
+                kmers_nb_solid                           : 806051417
+                kmers_nb_weak                            : 5987065992
+                kmers_percent_weak                       : 88.1
+            partitions                              
+                nb_partitions                            : 80
+                nb_items                                 : 806051417
+                part_biggest                             : 11735881
+                part_smallest                            : 9741656
+                part_mean                                : 10075642.7
+                kind                                    
+                    vector                                   : 80
+            fillsolid_time                           : 293.549
+                1.read                                   : 14.134
+                2.sort                                   : 28.746
+                3.dump                                   : 250.669
+        time                                     : 583.702
+            fill_partitions                          : 181.418
+            fill_solid_kmers                         : 402.284
