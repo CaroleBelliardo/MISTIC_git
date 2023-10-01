@@ -71,7 +71,8 @@ def parse_filename(input_string):
         if (tech == '') and (('illumina' in partie) or ('hifi' in partie)):
             parties = partie.split('_')
             tech = parties[0]
-            sampsize = parties[-1].replace('.fastq', '')
+            # replace fasta or fastq
+            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '')
 
         elif 'subsampling' in partie:
             subsampling = partie.split('_')[0]
