@@ -2,3 +2,8 @@
 *.err
 *.out
 *.sif
+*.fa
+*.fasta
+*.fastq
+*.aa
+*.pdf
