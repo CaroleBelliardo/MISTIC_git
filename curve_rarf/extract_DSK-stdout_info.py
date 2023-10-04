@@ -73,7 +73,7 @@ def parse_filename(input_string):
             parties = partie.split('_')
             tech = parties[0]
             # replace fasta or fastq
-            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '').replace('.gz', '')
+            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '').replace('.gzr', '')
 
         elif 'subsampling' in partie:
             subsampling = partie.split('_')[0]
