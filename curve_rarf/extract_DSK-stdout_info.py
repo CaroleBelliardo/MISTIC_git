@@ -58,6 +58,7 @@ def extract_info_from_txt(file_paths, keys_to_extract):
 def parse_filename(input_string):
     # Extraire les parties du chemin
     parties = input_string.split('/')
+    print(parties)
 
     # Initialiser les éléments du nouveau nom de fichier
     nouveau_nom_parts = []
@@ -72,7 +73,7 @@ def parse_filename(input_string):
             parties = partie.split('_')
             tech = parties[0]
             # replace fasta or fastq
-            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '')
+            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '').replace('.gz', '')
 
         elif 'subsampling' in partie:
             subsampling = partie.split('_')[0]
