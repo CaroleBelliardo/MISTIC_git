@@ -1,0 +1,6 @@
+predicting genes using Prodigal V2.6.3: February, 2016
+identifying single copy genes using blastp: 2.12.0+ Package: blast 2.12.0, build Jul 13 2021 09:03:00
+calculating contig lengths.
+starting bin selection from 955 bins 
+bin selection complete: 40 bins above score threshold selected. 
+extracting bins to 4-DAStool/salade_I_fev__hifi_reads_DASTool_bins
