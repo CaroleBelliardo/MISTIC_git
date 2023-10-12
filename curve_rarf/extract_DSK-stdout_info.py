@@ -49,23 +49,29 @@ def extract_info_from_txt(file_paths, keys_to_extract):
                         value = value.strip()
                         if key in keys_to_extract:
                             if key == 'bank_uri':
-                                value = parse_filename(value)
+                                value = '_'.join(file_path.replace('.txt', '').split(
+                                    '/') if '/' in file_path.replace('.txt', '') else file_path.replace('.txt', '').split('\\')[-1].split('_'))
+                                # parse_filename(file_path)
+
                             info_line[key] = value
             info.append(info_line)
     return info
 
 
 def parse_filename(input_string):
-    # Extraire les parties du chemin
-    parties = input_string.split('/')
-    print(parties)
+    # Extraire differentiellement les parties du chemin selon les séparateurs
+    parties = input_string.split(
+        '/') if '/' in input_string else input_string.split('\\')[-1].split('_')
 
     # Initialiser les éléments du nouveau nom de fichier
     nouveau_nom_parts = []
 
     # Parcourir les parties pour extraire les informations requises
-    tech = ''
-    subsampling = ''
+   # techno = parties[0]
+   # subsampling = parties[1]
+   # sampsize = parties[-1].replace('.fastq', '').replace(
+   #     '.fasta', '').replace('.gzr', '')
+   # pair = parties[2]
 
     for partie in parties:
         tech = ''
@@ -73,12 +79,13 @@ def parse_filename(input_string):
             parties = partie.split('_')
             tech = parties[0]
             # replace fasta or fastq
-            sampsize = parties[-1].replace('.fastq', '').replace('.fasta', '').replace('.gzr', '')
-
+            sampsize = parties[-1].replace('.fastq',
+                                           '').replace('.fasta', '').replace('.gzr', '')
         elif 'subsampling' in partie:
             subsampling = partie.split('_')[0]
     # Construire le nouveau nom de fichier en joignant les parties nécessaires
-    nouveau_nom = tech+'_'+subsampling+'_'+sampsize
+    nouveau_nom = techno+'_'+subsampling+'_'+sampsize
+    print(nouveau_nom)
     return nouveau_nom
 
 
@@ -116,4 +123,4 @@ if __name__ == '__main__':
 
     parse_listOFdico_to_csv(dico_info, output_csv)
 
-    # print(dico_info)
+    print(dico_info)
